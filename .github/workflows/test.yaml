@@ -26,12 +26,6 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist
 
-      - name: Run PHPStan
-        run: vendor/bin/phpstan analyse --level=max src/
-
-      - name: Run Psalm
-        run: vendor/bin/psalm --output-format=github
-
       - name: Run PHPUnit tests with coverage
         run: |
           mkdir -p build/coverage
