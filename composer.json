@@ -15,7 +15,7 @@
     }
   },
   "require": {
-    "php": "^8.0",
+    "php": "^8.2",
     "psr/http-message": "^2.0"
   },
   "suggest": {
@@ -28,9 +28,12 @@
     "phpunit/php-code-coverage": "^9.2",
     "symfony/var-dumper": "^5.2",
     "swoole/ide-helper": "dev-master",
-    "guzzlehttp/guzzle": "^7.0"
+    "guzzlehttp/guzzle": "^7.0",
+    "phpstan/phpstan": "^2.1",
+    "vimeo/psalm": "^6.5"
   },
   "scripts": {
-    "test": "phpunit --testdox tests "
+    "test": "phpunit --testdox tests",
+    "test-with-coverage": "phpunit --coverage-html build/coverage-html --coverage-clover build/logs/clover.xml"
   }
 }
